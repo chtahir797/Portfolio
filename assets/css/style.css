@@ -199,7 +199,6 @@ footer a{
         right: 0;
         top: 100%;
         background-color: #0f154781;
-        backdrop-filter: blur(5px);
         padding: 35px 5px;
         border-radius: 10px;
     }
@@ -208,6 +207,9 @@ footer a{
         0px 0px 0px 0px #fff;
         text-decoration: underline;
         border-radius: 10px;
+    }
+    .profile{
+        flex-direction: column-reverse;
     }
     .social-icons{
         flex-direction: row;
