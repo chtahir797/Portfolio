@@ -175,7 +175,7 @@ footer a{
     color: #fff;
     text-decoration: none;
 }
-@media (width < 760px) {
+@media (width < 1200px) {
     .menu-list{
         display: none;
         position: absolute;
