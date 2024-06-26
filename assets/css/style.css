@@ -11,6 +11,9 @@ body {
   color: #fff;
   font-family: "Rubik", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* navbar styling  */
 nav {
@@ -46,6 +49,7 @@ nav {
   color: white;
   padding: 5px 15px;
   transition: all 0.2s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 .menu a:hover {
