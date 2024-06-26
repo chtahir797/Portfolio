@@ -259,7 +259,7 @@ footer a {
     border-radius: 10px;
   }
   .profile {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .profile-content{
     display: flex;
