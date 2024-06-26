@@ -16,7 +16,7 @@ tsParticles.load("tsparticles", {
       },
       links: {
           enable: true,
-          color: "#000000",
+          color: "#fff",
           distance: 150,
           opacity: 0.4,
           width: 1
@@ -68,7 +68,7 @@ tsParticles.load("tsparticles", {
           bubble: {
               distance: 400,
               size: 20,
-              duration: 1,
+              duration: 0.1,
               opacity: 5,
               speed: 2
           },
