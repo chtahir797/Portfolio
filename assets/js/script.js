@@ -22,3 +22,39 @@ hamburger.addEventListener('click', () => {
     }
 });
 
+
+
+
+//Slider
+
+// Smooth scrolling for certificates slider
+const certificatesSlider = document.querySelector('.certificates-slider');
+
+// certificatesSlider.addEventListener('wheel', (event) => {
+//     event.preventDefault();
+//     certificatesSlider.scrollLeft += event.deltaY;
+// });
+document.addEventListener('DOMContentLoaded', function() {
+    const certificates = document.querySelectorAll('.certificate');
+    const certificatePopup = document.getElementById('certificate-popup');
+    const popupImage = document.getElementById('popup-image');
+    const closePopup = document.querySelector('.close-popup');
+
+    certificates.forEach(certificate => {
+        certificate.addEventListener('click', function() {
+            const certificateImage = this.querySelector('img').src;
+            popupImage.src = certificateImage;
+            certificatePopup.style.display = 'flex';
+        });
+    });
+
+    closePopup.addEventListener('click', function() {
+        certificatePopup.style.display = 'none';
+    });
+});
+
+
+// tilt effect 
+
+const tilt = $('.certificate img').tilt()
+tilt.on('tilt.mouseEnte', function (e, transforms) { });

@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/icon.jpg" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <title>Mr Tahir</title>
 </head>
 
@@ -42,9 +43,9 @@
                     <ul>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#">SKILLS</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
                         <li><a href="https://blogs.mrtahir.com/">BLOGS</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -101,15 +102,88 @@
                         professional experience. I transform ideas into reality using the latest technologies such as
                         JavaScript, React.js, Vanilla JS, Firebase, and WordPress. I care deeply about code readability
                         and maintainability, and I actively use linters and code analysis tools like Prettier. I find
-                        happiness in being a better version of myself today than I was yesterday. <span class="currently-working">
+                        happiness in being a better version of myself today than I was yesterday. <span
+                            class="currently-working">
                             Scroll down to see
-                        some of the projects I've been working on.
+                            some of the projects I've been working on.
                         </span>
                     </p>
                 </div>
             </div>
         </div>
+
+        <!-- education and certificates  -->
+
+        <div id="education-certificates" class="education-certificates">
+            <div class="education">
+                <h2>Education</h2>
+                <div class="education-details">
+                    <img src="assets/images/graduation.svg" alt="University Icon">
+                    <div>
+                        <p>Graduated from</p>
+                        <h3>Quaid-i-Azam University, Islamabad</h3>
+                        <p>BSIT | CGPA: 3.0/4.0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="certificates">
+                <div class="certificate">
+                    <img src="assets/images/certificate1.jpg" alt="Certificate 1">
+                </div>
+                <div class="certificate">
+                    <img src="assets/images/certificate2.jpg" alt="Certificate 2">
+                </div>
+                <div class="certificate">
+                    <img src="assets/images/certificate3.jpg" alt="Certificate 3">
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
+
+    <!-- Skill Section  -->
+    <section id="skills">
+        <div class="skills">
+            <div class="heading">
+                <h1>Tools and Tech I use daily</h1>
+            </div>
+            <div class="toolstech">
+                <div class="html tech">
+                    <div class="techimg"><img src="assets/images/html.svg" alt=""></div>
+                    <div class="techheading"><p>HTML</p></div>
+                </div>
+                <div class="css tech">
+                    <div class="techimg"><img src="assets/images/css.svg" alt=""></div>
+                    <div class="techheading"><p>CSS</p></div>
+                </div>
+                <div class="js tech">
+                    <div class="techimg"><img src="assets/images/javascript.svg" alt=""></div>
+                    <div class="techheading"><p>JavaScript</p></div>
+                    
+                </div>
+                <div class="react tech">
+                    <div class="techimg"><img src="assets/images/react.svg" alt=""></div>
+                    <div class="techheading"><p>React JS</p></div>
+                </div>
+                <div class="wordpress tech">
+                    <div class="techimg"><img src="assets/images/wordpress.svg" alt=""></div>
+                    <div class="techheading"><p>Wordpress</p></div>
+                </div>
+                <div class="vscode tech">
+                    <div class="techimg"><img src="assets/images/vscode.svg" alt=""></div>
+                    <div class="techheading"><p>VS Code</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup -->
+    <div id="certificate-popup" class="certificate-popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <img id="popup-image" src="" alt="Certificate">
+        </div>
+    </div>
 
     <footer>
         <p>
@@ -120,6 +194,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
     <script src="assets/js/particlesConfig.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+
+
+
+
+
+
+
 </body>
 
 </html>
