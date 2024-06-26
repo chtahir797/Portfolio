@@ -55,7 +55,7 @@ tsParticles.load("tsparticles", {
         },
         onClick: {
             enable: true,
-            mode: "push"
+            mode: "bubble"
         }
     },
       modes: {
@@ -67,10 +67,10 @@ tsParticles.load("tsparticles", {
           },
           bubble: {
               distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3
+              size: 20,
+              duration: 1,
+              opacity: 5,
+              speed: 2
           },
           repulse: {
               distance: 100,
@@ -80,7 +80,7 @@ tsParticles.load("tsparticles", {
               particles_nb: 4
           },
           remove: {
-              particles_nb: 2
+              particles_nb: 24
           }
       }
   },

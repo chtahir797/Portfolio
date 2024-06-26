@@ -1,5 +1,5 @@
 //media query code
-let width = window.matchMedia("(width < 760px)")
+let width = window.matchMedia("(width < 1200px)")
 const menu = document.querySelector('.menu-list')
 const hamburger = document.querySelector('#hamburger')
 const cross = document.querySelector('.cross')
@@ -22,6 +22,3 @@ hamburger.addEventListener('click', () => {
     }
 });
 
-cross.addEventListener('click', ()=>{
-    menu.style.display = 'none';
-})
