@@ -196,7 +196,7 @@ footer a {
     border-radius: 10px;
   }
   .profile {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .social-icons {
     flex-direction: row;
