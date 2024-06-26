@@ -146,9 +146,6 @@ nav {
     background-color: #df2554; 
   }
   
-/* .contact-button a:hover {
-  background-color: #df2554;
-} */
 
 /* footer  */
 footer {
@@ -174,8 +171,8 @@ footer a {
     height: 50px;
   }
   .hamburger img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
   .menu-list {
     display: none;
@@ -199,7 +196,7 @@ footer a {
     border-radius: 10px;
   }
   .profile {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .social-icons {
     flex-direction: row;
