@@ -138,9 +138,17 @@ document.getElementById("show-more").addEventListener("click", () => {
   }
   
   displayProjects();
+
+    // Initialize Tilt.js on project items
+    VanillaTilt.init(document.querySelectorAll(".project-item"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.5,
+    });
+  
 });
 displayProjects();
-
 
 // tilt effect
 
