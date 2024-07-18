@@ -582,19 +582,125 @@ footer a {
 }
 
 .certificate {
-    width: calc(50% - 20px); /* 2 certificates per row */
+    width: calc(50% - 20px); 
     margin-bottom: 20px;
 }
 }
 
-
-
-@media (max-width: 768px) {
+@media (width< 768px) {
   .certificate {
-      width: 100%; /* 1 certificate per row */
+      width: 100%; 
   }
 }
 
+
+/* Contact section */
+
+.contact {
+  width: 90vw;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.contact .heading h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #df2554;
+  font-weight: 700;
+}
+
+.contact-form-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background: #1b2b59;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form-container .form-group input,
+.contact-form-container .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e3a67;
+  color: #fff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container .form-group input::placeholder,
+.contact-form-container .form-group textarea::placeholder {
+  color: #f39c12;
+  opacity: 0.8;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+
+.contact-form-container .form-group input:focus::placeholder,
+.contact-form-container .form-group textarea:focus::placeholder {
+  color: #f39c12;
+  opacity: 1;
+  font-style: italic;
+}
+
+.contact-form-container .form-group input:focus,
+.contact-form-container .form-group textarea:focus {
+  outline: none;
+  background-color: #394b89;
+  box-shadow: 0 0 10px rgba(222, 41, 84, 0.5);
+}
+
+.contact-form-container .form-group textarea {
+  resize: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #df2554, #e74c3c);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  transform: translateY(-5px);
+}
+
+.toast {
+  position: fixed;
+  bottom: 20%;
+  right: 10px;
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.toast-show {
+  opacity: 1; 
+  visibility: visible; 
+}
+
+.toast-message {
+  color: #fff;
+  background-color: #2ecc71;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: bolder;
+}
 
 
 

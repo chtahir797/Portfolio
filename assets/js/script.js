@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const projects = [
   {
     id: 1,
-    title: "Password Generator App",
+    title: "Password Generator",
     description:
       "A React-based application that generates secure passwords, allowing users to specify the length and include special characters and numbers, with an option to copy the generated password.",
     link: "https://github.com/chtahir797/React-Practice-Projects/tree/main/password-generator",
@@ -170,6 +170,44 @@ document.getElementById("previous").addEventListener("click", () => {
 });
 
 displayProjects();
+
+
+document.getElementById('send-email').addEventListener('click', function() {
+  const toast = document.querySelector('.toast');
+  toast.classList.add('toast-show');
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Compose email content
+  const subject = encodeURIComponent('Message from ' + name);
+  const body = encodeURIComponent('Email: ' + email + '\n\nMessage:\n' + message);
+  const mailtoLink = 'mailto:chtahir797@gmail.com?subject=' + subject + '&body=' + body;
+
+  // Detect device type
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    // Open default email app on mobile devices
+    window.location.href = mailtoLink;
+  } else {
+    // Open Gmail in a new tab on desktops
+    setTimeout(() => {
+      // This creates a Gmail URL to open in a new tab
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=chtahir797@gmail.com&su=${subject}&body=${body}`;
+      window.open(gmailUrl, '_blank');
+    }, 2000);
+  }
+
+  // Hide toast after some time
+  setTimeout(function() {
+    toast.classList.remove('toast-show'); // Hide toast with animation
+  }, 8000);
+});
+
+
+
 // tilt effect
 
 const tilt = $(".certificate img").tilt();
