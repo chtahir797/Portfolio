@@ -70,7 +70,6 @@ const projects = [
     demo: "https://chtahir797.github.io/NotesApp/",
     tags: ["JavaScript", "HTML", "CSS"],
   },
-
   {
     id: 4,
     title: "Todo List App",
@@ -80,25 +79,36 @@ const projects = [
     demo: "https://chtahir797.github.io/Simple-TodoList-JS/",
     tags: ["JavaScript", "HTML", "CSS"],
   },
+  {
+    id: 5,
+    title: "Weather App",
+    description:
+      "A weather application that fetches and displays current weather conditions and forecasts for any location using a public weather API.",
+    link: "https://github.com/chtahir797/Weather-App",
+    demo: "https://chtahir797.github.io/Weather-App/",
+    tags: ["JavaScript", "API"],
+  },
+  
 ];
 
 
-
 let currentProjectIndex = 0;
-const projectsPerPage = 3; 
-let showMore = true; 
+const projectsPerPage = 3;
 
 function displayProjects() {
   const projectGrid = document.getElementById("project-grid");
-  const showMoreBtn = document.getElementById("show-more");
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("previous");
   const loadingIcon = document.getElementById("loading-icon");
+
   loadingIcon.style.display = "block";
   projectGrid.innerHTML = "";
   const endIndex = currentProjectIndex + projectsPerPage;
+
   setTimeout(() => {
     for (let i = currentProjectIndex; i < endIndex; i++) {
       if (i >= projects.length) {
-        break; 
+        break;
       }
 
       const project = projects[i];
@@ -121,37 +131,45 @@ function displayProjects() {
       projectGrid.appendChild(projectItem);
     }
     loadingIcon.style.display = "none";
+
+    // Update button states based on the current project index
     if (currentProjectIndex + projectsPerPage >= projects.length) {
-      showMoreBtn.textContent = "Show Less";
+      nextBtn.disabled = true;
     } else {
-      showMoreBtn.textContent = "Show More";
+      nextBtn.disabled = false;
     }
+
+    if (currentProjectIndex === 0) {
+      prevBtn.disabled = true;
+    } else {
+      prevBtn.disabled = false;
+    }
+
+    // Initialize Tilt.js on project items
     VanillaTilt.init(document.querySelectorAll(".project-item"), {
       max: 25,
       speed: 400,
       glare: true,
       "max-glare": 0.5,
     });
-  }, 1000); 
-      // Initialize Tilt.js on project items
-     
+  }, 1000);
 }
-document.getElementById("show-more").addEventListener("click", () => {
-  if (currentProjectIndex + projectsPerPage >= projects.length) {
-    currentProjectIndex = 0;
-    showMore = true;
-  } else {
-    currentProjectIndex += projectsPerPage; 
-    showMore = true; 
+
+document.getElementById("next").addEventListener("click", () => {
+  if (currentProjectIndex + projectsPerPage < projects.length) {
+    currentProjectIndex += projectsPerPage;
   }
-  
   displayProjects();
-
-
-  
 });
-displayProjects();
 
+document.getElementById("previous").addEventListener("click", () => {
+  if (currentProjectIndex > 0) {
+    currentProjectIndex -= projectsPerPage;
+  }
+  displayProjects();
+});
+
+displayProjects();
 // tilt effect
 
 const tilt = $(".certificate img").tilt();
