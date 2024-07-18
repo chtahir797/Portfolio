@@ -279,11 +279,7 @@ nav {
   border-radius: 10px;
 }
 
-/* .certificate:hover {
-  transform: scale(1.05);
-} */
 
-/* Certificate Popup */
 .certificate-popup {
   position: fixed;
   top: 0;
@@ -331,7 +327,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-bottom: 20px;
+
   width: 90vw;
   margin: auto;
 }
@@ -340,6 +336,7 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
+  margin-bottom: 20px;
 }
 .toolstech img{
   width: 100px;
@@ -362,57 +359,6 @@ nav {
   text-align: center;
 }
 
-/* meeting and contact section  */
-
-/* Contact and Meetings Section */
-#contact-meetings {
-  background-color: #0b1138;
-  color: #fff;
-  padding: 50px 0;
-  text-align: center;
-}
-#contact-meetings .container {
-  width: 90vw;
-  margin: auto;
-}
-#contact-meetings h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #df2554;
-}
-#contact-meetings .form-group {
-  margin-bottom: 20px;
-}
-#contact-meetings label {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: #f39c12;
-}
-#contact-meetings input, #contact-meetings select {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 2px solid #df2554;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #0b1138;
-}
-#contact-meetings button {
-  background: #df2554;
-  padding: 15px 25px;
-  outline: none;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-#contact-meetings button:hover {
-  background: #f39c12;
-}
-
-
 /* footer  */
 footer {
   height: 100px;
@@ -422,8 +368,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: fixed;
-    bottom: 0%; */
 }
 
 footer a {
@@ -443,7 +387,6 @@ footer a {
   .menu-list {
     display: none;
     flex-direction: column;
-    /* position: relative; */
   }
   .hamburger {
     display: block;
@@ -511,3 +454,143 @@ footer a {
       width: 100%; /* 1 certificate per row */
   }
 }
+
+
+/* project section  */
+
+.projects {
+  width: 90vw;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #df2554;
+  font-weight: 700;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-width: 300px;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #2ecc71;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  background-color: #0f1647;
+  scale: 1.07;
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f39c12;
+}
+.show-more-container{
+  height: 100px;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #2ecc71;
+  height: 150px;
+  text-align: justify;
+  
+}
+
+.project-item a {
+  transition: 0.1s ease-in-out;
+}
+
+.project-item a:hover {
+  scale: 1.2;
+}
+
+.project-item::before {
+  content: attr(data-title); 
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #df2554;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.project-item:hover::before {
+  opacity: 1;
+  top: -40px; 
+}
+
+
+.tags{
+  text-align: left;
+}
+.tag {
+  display: inline-block;
+  background-color:#df2554 ;
+  color: #fff;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+}
+.links img{
+  width: 50px;
+  height: 50px;
+}
+
+
+.show-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.show-more {
+  background: none;
+  border: 2px solid #df2554;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.show-more:hover{
+  background-color: #2ecc71;
+  border:2px solid #2ecc71;
+  scale: 1.05;
+}
+
+.loading-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+
+

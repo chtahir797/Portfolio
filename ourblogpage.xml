@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:layoutsVersion='3' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title>Mr Tahir</title>
+    <meta content='ca-pub-2373533127351679' name='google-adsense-account'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <meta content='Mr Tahir&apos;s personal website showcasing projects, blog posts, and contact information.' name='description'/>
+    <meta content='Mr Tahir, personal website, projects, blog, contact, portfolio' name='keywords'/>
+    <meta content='Mr Tahir' name='author'/>
+    <meta content='Mr Tahir' property='og:title'/>
+    <meta content='Explore Mr Tahir&apos;s projects, read his blog posts, and get in touch.' property='og:description'/>
+    <meta content='https://mrtahir.com/assets/images/icon.jpg' property='og:image'/>
+    <meta content='https://mrtahir.com' property='og:url'/>
+    <meta content='summary_large_image' name='twitter:card'/>
+    <meta content='Mr Tahir' name='twitter:title'/>
+    <meta content='Explore Mr Tahir&apos;s projects, read his blog posts, and get in touch.' name='twitter:description'/>
+    <meta content='https://mrtahir.com/assets/images/icon.jpg' name='twitter:image'/>
+    <link href='assets/images/icon.jpg' rel='icon' type='image/svg+xml'/>
+
+    <b:skin><![CDATA[
+	@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #0b1138;
+        color: #fff;
+        font-family: "Rubik", sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+        /* navbar styling  */
+      nav {
+        border-bottom: 3px solid #0f1647;
+        margin: 10px;
+        padding: 5px;
+        backdrop-filter: blur(5px);
+      }
+      .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        margin: auto;
+      }
+      .logo img {
+        width: 100px;
+        height: 100px;
+      }
+      .menu {
+        display: flex;
+      }
+      .menu ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 15px;
+        transition: all 0.2s ease-in-out;
+        scroll-behavior: smooth;
+      }
+
+      .menu a:hover {
+        box-shadow: 0px 0px 7px 2px #fff inset, 0px 0px 2px 2px #fff;
+        border-radius: 10px;
+      }
+      .hamburger {
+        display: none;
+      }
+      .hamburger img {
+        width: 50px;
+        height: 50px;
+      }
+	  /* footer  */
+      footer {
+        height: 100px;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        border-top: 1px solid #0f1647;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* position: fixed;
+          bottom: 0%; */
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+    @media (width < 1200px) {
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+      .hamburger img {
+        width: 35px;
+        height: 35px;
+      }
+      .menu-list {
+        display: none;
+        flex-direction: column;
+        /* position: relative; */
+      }
+      .hamburger {
+        display: block;
+      }
+      .menu-list ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #0f154781;
+        padding: 35px 5px;
+        border-radius: 10px;
+      }
+      .menu a:hover {
+        box-shadow: 0px 0px 0px 0px #fff inset, 0px 0px 0px 0px #fff;
+        text-decoration: underline;
+        border-radius: 10px;
+      }
+    }
+    ]]></b:skin>
+    <b:template-skin> 
+        <!-- CSS code for template  -->
+      body#layout#header{
+		width:100%;
+      }
+    </b:template-skin>
+  
+  <!-- JavaScript -->
+
+
+</head>
+
+<body>
+
+    <header>
+        <b:section class='header' id='header'/>
+            <!-- navbar  -->
+    <nav>
+        <div class='nav-bar'>
+            <div class='logo'>
+                <img alt='Coder Image' src='https://mrtahir.com/assets/images/logo.png'/>
+            </div>
+
+            <div class='menu' id='menu'>
+                <div class='hamburger' id='hamburger'>
+                    <img alt='hamburger icon' src='https://mrtahir.com/assets/images/hamburger.svg'/>
+                </div>
+
+                <div class='menu-list'>
+                    <ul>
+                        <li><a href='#'>HOME</a></li>
+                        <li><a href='#about'>ABOUT</a></li>
+                        <li><a href='#skills'>SKILLS</a></li>
+                        <li><a href='https://blogs.mrtahir.com/'>BLOGS</a></li>
+                        <li><a href='#contact'>CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+  
+     <footer>
+          <b:section class='footerr' id='footer'/>
+          <p>
+              &#169; 2024 Created with &#10084;&#65039; by
+              <a href='https://www.linkedin.com/in/chtahir797' target='_blank'>Tahir</a>
+          </p>
+    </footer>
+  
+  
+
+   <script type='text/javascript'>
+    // JavaScript code for responsive menu
+    const width = window.matchMedia(&quot;(max-width: 1200px)&quot;);
+    const menu = document.querySelector(&#39;.menu-list&#39;);
+    const hamburger = document.querySelector(&#39;#hamburger&#39;);
+    
+    // Initial check
+    if (width.matches) {
+        menu.style.display = &#39;none&#39;;
+        hamburger.style.display = &#39;block&#39;;
+    } else {
+        menu.style.display = &#39;block&#39;;
+        hamburger.style.display = &#39;none&#39;;
+    }
+    
+    // Add listener for changes
+    width.addListener((event) =&gt; {
+        if (event.matches) {
+            menu.style.display = &#39;none&#39;;
+            hamburger.style.display = &#39;block&#39;;
+        } else {
+            menu.style.display = &#39;block&#39;;
+            hamburger.style.display = &#39;none&#39;;
+        }
+    });
+    
+    // Hamburger menu toggle
+    hamburger.addEventListener(&#39;click&#39;, () =&gt; {
+        if (menu.style.display === &#39;none&#39; || menu.style.display === &#39;&#39;) {
+            menu.style.display = &#39;block&#39;;
+        } else {
+            menu.style.display = &#39;none&#39;;
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
