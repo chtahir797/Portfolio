@@ -760,19 +760,18 @@ footer a {
 
 .code-snippet {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   border: 1px solid #27ae60;
   background-color: #27ae5f65;
   border-radius: 5px;
   padding: 1rem;
-  position: relative;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   width: 100%;
 }
 
 pre {
-  background-color: #2d2d2d; /* Dark background color */
-  color: #f8f8f2; /* Light text color */
+  background-color: #2d2d2d; 
+  color: #f8f8f2;
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
@@ -811,9 +810,7 @@ code {
 
 
 .copy-btn {
-  position: absolute;
-  top: 0;
-  right: 10px;
+  align-self: flex-end;
   cursor: pointer;
   background: none;
   outline: none;
