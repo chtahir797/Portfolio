@@ -776,6 +776,7 @@ pre {
   padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
   margin: 20px 0;
 }
@@ -786,20 +787,24 @@ code {
   line-height: 1.5;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   pre {
     padding: 10px;
   }
 }
 
-@media (max-width: 480px) {
+@media (width < 480px) {
+
   pre {
     padding: 8px;
   }
 
   code {
-    font-size: 0.9em;
+    font-size: 0.7em;
+  }
+  .container{
+    padding: 5px;
+    max-width: 90%;
   }
 }
 
