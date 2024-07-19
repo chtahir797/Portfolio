@@ -144,7 +144,6 @@ function displayProjects() {
     } else {
       prevBtn.disabled = false;
     }
-
     // Initialize Tilt.js on project items
     VanillaTilt.init(document.querySelectorAll(".project-item"), {
       max: 25,
@@ -152,6 +151,7 @@ function displayProjects() {
       glare: true,
       "max-glare": 0.5,
     });
+
   }, 1000);
 }
 
@@ -173,8 +173,6 @@ displayProjects();
 
 
 document.getElementById('send-email').addEventListener('click', function() {
-  const toast = document.querySelector('.toast');
-  toast.classList.add('toast-show');
 
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -187,25 +185,28 @@ document.getElementById('send-email').addEventListener('click', function() {
 
   // Detect device type
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
   if (isMobile) {
-    // Open default email app on mobile devices
     window.location.href = mailtoLink;
   } else {
-    // Open Gmail in a new tab on desktops
     setTimeout(() => {
       // This creates a Gmail URL to open in a new tab
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=chtahir797@gmail.com&su=${subject}&body=${body}`;
       window.open(gmailUrl, '_blank');
     }, 2000);
   }
+  showToaster("Opening Gmail ...");
 
-  // Hide toast after some time
-  setTimeout(function() {
-    toast.classList.remove('toast-show'); // Hide toast with animation
-  }, 8000);
 });
 
+
+function showToaster(message) {
+  const toaster = document.getElementById("toaster");
+  toaster.textContent = message;
+  toaster.classList.add("show");
+  setTimeout(() => {
+    toaster.classList.remove("show");
+  }, 3000);
+}
 
 
 // tilt effect

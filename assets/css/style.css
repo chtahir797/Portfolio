@@ -120,6 +120,7 @@ nav {
   color: #df2554;
 }
 
+
 .contact-button a {
   background: none;
   padding: 15px 25px;
@@ -133,6 +134,13 @@ nav {
   position: relative;
   display: inline-block;
 }
+.contact-button{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .contact-button a::before {
     content: "";
     transition: width 0.5s ease-in, background-color 0.5s ease-out;
@@ -206,6 +214,7 @@ nav {
 }
 .currently-working{
   color: #2ecc71;
+  
 }
 
 
@@ -349,10 +358,11 @@ nav {
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease;
-  min-width: 300px;
-  width: 400px;
-  height: 300px;
+  max-width: 400px;
   border: 1px solid #2ecc71;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-item:hover {
@@ -429,7 +439,7 @@ nav {
   width: 50px;
   height: 50px;
 }
-.nextpre{
+.pagination{
   width: 80vw;
   margin: auto;
   display: flex;
@@ -702,7 +712,237 @@ footer a {
   font-weight: bolder;
 }
 
+.search-header {
+  padding: 20px;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: end;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  max-width: 400px;
+  width: 100%;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: #f39c12;
+}
+
+#search-button img{
+  height: 50px;
+  width: 50px;
+}
+
+#search-button img:hover {
+  scale: 1.2;
+}
+
+/* Blog container styles */
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  width: 90vw;
+}
+
+/* Blog card styles */
+.blog-card {
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-width: 300px;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #2ecc71;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  background-color: #0f1647;
+  scale: 1.07;
+}
+
+.blog-card-content {
+  padding: 20px;
+}
+
+.blog-card-title {
+  font-size: 1.25rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.blog-card-summary {
+  font-size: 1rem;
+  color: #2ecc71;
+  text-align: justify;
+}
+
+.blog-card-footer {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
 
 
+
+.links img {
+  transition: transform 0.2s ease-in-out;
+}
+.links img:hover {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+.no-blogs{
+  color: #df2554;
+  display: grid;
+  place-items: center;
+  height: 40vh;
+}
+
+
+.container {
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.blog-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #df2554;
+}
+
+.blog-date,
+.blog-author {
+  color: #f39c12;
+  margin-bottom: 0.5rem;
+}
+
+.blog-introduction {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+  color: #e74c3c
+}
+
+.section-content {
+  margin-top: 1rem;
+  color: #7ef6c4;
+}
+
+.code-snippet {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #27ae60;
+  background-color: #27ae5f65;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.code-snippet pre {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.copy-btn img {
+  height: 20px;
+  vertical-align: middle;
+}
+
+.blog-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.additional-info,
+.recommendation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  color: #f39c12;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
+.toaster {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.toaster.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 

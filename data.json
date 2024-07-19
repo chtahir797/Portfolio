@@ -1,0 +1,207 @@
+[
+  {
+    "id": "1",
+    "title": "Introduction to Git Terminology and Usage",
+    "author": "John Doe",
+    "date_published": "2024-07-19",
+    "content": {
+      "introduction": "Git terminology can be confusing at first. For example, they call a folder a repository and an alternative timeline a branch.",
+      "sections": [
+        {
+          "section_title": "Check your git version",
+          "section_content": "To check your git version, run the following command:",
+          "code_snippet": "git --version",
+          "explanation": "This command shows the installed git version."
+        },
+        {
+          "section_title": "Repository",
+          "section_content": "A repository is a collection of files and directories.",
+          "code_snippet": "git status",
+          "images": ["repository_status_image.png"],
+          "additional_info": "Green folders are tracked by git, red ones are not."
+        },
+        {
+          "section_title": "Your config settings",
+          "section_content": "You can change settings like your username and email.",
+          "recommendation": "Set up your email and username after creating a GitHub account."
+        }
+      ]
+    },
+    "tags": ["Git", "Version Control", "GitHub", "Software Development"],
+    "metadata": {
+      "word_count": 200,
+      "read_time": "2 minutes"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Getting Started with Python",
+    "author": "Jane Smith",
+    "date_published": "2024-07-18",
+    "content": {
+      "introduction": "Python is a versatile programming language.",
+      "sections": [
+        {
+          "section_title": "Installing Python",
+          "section_content": "Download and install Python from the official website.",
+          "code_snippet": "python --version",
+          "explanation": "This command shows the installed Python version."
+        },
+        {
+          "section_title": "Running Your First Script",
+          "section_content": "Create a simple script and run it using Python.",
+          "code_snippet": "python script.py",
+          "images": ["python_script_image.png"],
+          "additional_info": "This script prints 'Hello, World!' to the console."
+        },
+        {
+          "section_title": "Using Python Packages",
+          "section_content": "Install packages using pip.",
+          "recommendation": "Start with popular packages like numpy and requests."
+        }
+      ]
+    },
+    "tags": ["Python", "Programming", "Development"],
+    "metadata": {
+      "word_count": 250,
+      "read_time": "3 minutes"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Understanding HTML Basics",
+    "author": "Emily Davis",
+    "date_published": "2024-07-17",
+    "content": {
+      "introduction": "HTML is the foundation of web development.",
+      "sections": [
+        {
+          "section_title": "What is HTML?",
+          "section_content": "HTML stands for HyperText Markup Language.",
+          "code_snippet": "<!DOCTYPE html>",
+          "explanation": "This is the declaration for HTML5."
+        },
+        {
+          "section_title": "Basic Tags",
+          "section_content": "Common tags include <p>, <a>, and <div>.",
+          "code_snippet": "<div id=\"certificate-popup\" class=\"certificate-popup\">\n    <div class=\"popup-content\">\n        <span class=\"close-popup\">&times;</span>\n        <img id=\"popup-image\" src=\"\" alt=\"Certificate\">\n    </div>\n</div>",
+          "images": ["html_tags_image.png"],
+          "additional_info": "This creates a paragraph with the text 'Hello, World!'."
+        },
+        {
+          "section_title": "Creating a Simple Page",
+          "section_content": "Combine tags to create a webpage.",
+          "recommendation": "Start with a simple layout and build from there."
+        }
+      ]
+    },
+    "tags": ["HTML", "Web Development", "Frontend"],
+    "metadata": {
+      "word_count": 300,
+      "read_time": "4 minutes"
+    }
+  },
+  {
+    "id": "4",
+    "title": "CSS: Styling the Web",
+    "author": "Michael Brown",
+    "date_published": "2024-07-16",
+    "content": {
+      "introduction": "CSS is used to style HTML content.",
+      "sections": [
+        {
+          "section_title": "What is CSS?",
+          "section_content": "CSS stands for Cascading Style Sheets.",
+          "code_snippet": "body { background-color: lightblue; }",
+          "explanation": "This changes the background color of the page."
+        },
+        {
+          "section_title": "Selectors and Properties",
+          "section_content": "Selectors target elements, properties style them.",
+          "code_snippet": "p { color: red; }",
+          "images": ["css_selectors_image.png"],
+          "additional_info": "This makes all paragraph text red."
+        },
+        {
+          "section_title": "Responsive Design",
+          "section_content": "Use media queries to create responsive designs.",
+          "recommendation": "Test your design on various screen sizes."
+        }
+      ]
+    },
+    "tags": ["CSS", "Web Design", "Frontend"],
+    "metadata": {
+      "word_count": 350,
+      "read_time": "5 minutes"
+    }
+  },
+  {
+    "id": "5",
+    "title": "JavaScript for Beginners",
+    "author": "Sarah Lee",
+    "date_published": "2024-07-15",
+    "content": {
+      "introduction": "JavaScript is a popular language for web development.",
+      "sections": [
+        {
+          "section_title": "Introduction to JavaScript",
+          "section_content": "JavaScript adds interactivity to websites.",
+          "code_snippet": "console.log('Hello, World!');",
+          "explanation": "This prints 'Hello, World!' to the console."
+        },
+        {
+          "section_title": "Variables and Data Types",
+          "section_content": "Learn about variables and different data types.",
+          "code_snippet": "let x = 10;",
+          "images": ["js_variables_image.png"],
+          "additional_info": "This creates a variable x with the value 10."
+        },
+        {
+          "section_title": "Functions and Events",
+          "section_content": "Create functions and handle events.",
+          "code_snippet": "let currentBlogIndex = 0;\r\nlet blogs = [];\r\n\r\n// Fetch blog data from data.json\r\nfetch(\"data.json\")\r\n  .then((response) => response.json())\r\n  .then((data) => {\r\n    blogs = data; // Store blog data\r\n    const urlParams = new URLSearchParams(window.location.search);\r\n    const blogId = urlParams.get(\"id\");\r\n    \r\n    // Find and set the initial blog index based on URL\r\n    if (blogId) {\r\n      currentBlogIndex = blogs.findIndex((b) => b.id === blogId);\r\n    }\r\n\r\n    if (currentBlogIndex === -1) {\r\n      currentBlogIndex = 0; // Default to the first blog if not found\r\n    }\r\n\r\n    displayBlog(currentBlogIndex); // Display the blog based on current index\r\n    updatePaginationButtons(); // Update pagination button states\r\n  })\r\n  .catch((error) => console.error(\"Error fetching blog data:\", error));\r\n\r\n// Function to display blog based on index\r\nfunction displayBlog(index) {\r\n  if (index < 0 || index >= blogs.length) {\r\n    document.getElementById(\"blog-detail\").innerHTML = \"<p>Blog not found.</p>\";\r\n    return;\r\n  }\r\n\r\n  const blog = blogs[index];\r\n  const blogDetail = document.getElementById(\"blog-detail\");\r\n\r\n  // Construct blog details HTML\r\n  let blogHTML = `\r\n    <div class=\"blog-title\">${blog.title}</div>\r\n    <div class=\"blog-date\">Published on: ${blog.date_published}</div>\r\n    <div class=\"blog-author\">Author: ${blog.author}</div>\r\n    <div class=\"blog-introduction\">${blog.content.introduction}</div>\r\n  `;\r\n\r\n  blogHTML += blog.content.sections.map((section) => `\r\n    <div class=\"section\">\r\n      <div class=\"section-title\">${section.section_title}</div>\r\n      <div class=\"section-content\">${section.section_content}</div>\r\n      ${section.code_snippet ? `\r\n        <pre class=\"code-snippet\">\r\n          <code>${escapeHTML(section.code_snippet)}</code>\r\n          <button class=\"copy-btn\" data-code=\"${encodeURIComponent(section.code_snippet)}\">\r\n            <img src=\"assets/images/copy.svg\" alt=\"Copy\">\r\n          </button>\r\n        </pre>\r\n      ` : ''}\r\n      ${section.images ? section.images.map((image) => `\r\n        <img class=\"blog-image\" src=\"images/${image}\" alt=\"${image}\">\r\n      `).join('') : ''}\r\n      ${section.additional_info ? `\r\n        <div class=\"additional-info\">${section.additional_info}</div>\r\n      ` : ''}\r\n      ${section.recommendation ? `\r\n        <div class=\"recommendation\">${section.recommendation}</div>\r\n      ` : ''}\r\n    </div>\r\n  `).join('');\r\n\r\n\r\n  blogDetail.innerHTML = blogHTML;\r\n\r\n  // Attach event listeners for copy buttons\r\n  document.querySelectorAll('.copy-btn').forEach((btn) => {\r\n    btn.addEventListener('click', (event) => {\r\n      const code = decodeURIComponent(event.currentTarget.getAttribute('data-code'));\r\n      copyCode(code);\r\n    });\r\n  });\r\n}\r\n\r\n// Function to escape HTML characters\r\nfunction escapeHTML(html) {\r\n  return html\r\n    .replace(/&/g, '&amp;')\r\n    .replace(/</g, '&lt;')\r\n    .replace(/>/g, '&gt;')\r\n    .replace(/\"/g, '&quot;')\r\n    .replace(/'/g, '&#039;');\r\n}\r\n\r\n// Function to copy code to clipboard\r\nfunction copyCode(code) {\r\n  navigator.clipboard.writeText(code)\r\n    .then(() => {\r\n      showToaster(\"Code copied to clipboard!\");\r\n    })\r\n    .catch((err) => console.error(\"Failed to copy code: \", err));\r\n}\r\n\r\n// Function to show toaster notification\r\nfunction showToaster(message) {\r\n  const toaster = document.getElementById(\"toaster\");\r\n  toaster.textContent = message;\r\n  toaster.classList.add(\"show\");\r\n  setTimeout(() => {\r\n    toaster.classList.remove(\"show\");\r\n  }, 3000);\r\n}\r\n\r\n// Function to update pagination button states\r\nfunction updatePaginationButtons() {\r\n  document.getElementById('previous').disabled = currentBlogIndex <= 0;\r\n  document.getElementById('next').disabled = currentBlogIndex >= blogs.length - 1;\r\n}\r\n\r\n// Function to navigate to a blog and update URL\r\nfunction navigateToBlog(index) {\r\n  if (index >= 0 && index < blogs.length) {\r\n    const blogId = blogs[index].id;\r\n    // Update URL without reloading the page\r\n    history.pushState(null, null, `?id=${blogId}`);\r\n    displayBlog(index);\r\n    updatePaginationButtons();\r\n  }\r\n}\r\n\r\n// Event listeners for pagination buttons\r\ndocument.getElementById('previous').addEventListener('click', () => {\r\n  if (currentBlogIndex > 0) {\r\n    currentBlogIndex--;\r\n    navigateToBlog(currentBlogIndex);\r\n  }\r\n});\r\n\r\ndocument.getElementById('next').addEventListener('click', () => {\r\n  if (currentBlogIndex < blogs.length - 1) {\r\n    currentBlogIndex++;\r\n    navigateToBlog(currentBlogIndex);\r\n  }\r\n});\r\n\r\n// Handle back/forward navigation\r\nwindow.addEventListener('popstate', () => {\r\n  const urlParams = new URLSearchParams(window.location.search);\r\n  const blogId = urlParams.get(\"id\");\r\n  if (blogId) {\r\n    currentBlogIndex = blogs.findIndex((b) => b.id === blogId);\r\n    displayBlog(currentBlogIndex);\r\n    updatePaginationButtons();\r\n  }\r\n});\r\n",
+          "recommendation": "Practice by creating interactive elements."
+        }
+      ]
+    },
+    "tags": ["JavaScript", "Web Development", "Frontend"],
+    "metadata": {
+      "word_count": 300,
+      "read_time": "4 minutes"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Getting Started with React",
+    "author": "David Wilson",
+    "date_published": "2024-07-14",
+    "content": {
+      "introduction": "React is a popular JavaScript library for building user interfaces.",
+      "sections": [
+        {
+          "section_title": "What is React?",
+          "section_content": "React makes it easy to create interactive UIs.",
+          "code_snippet": "npx create-react-app my-app",
+          "explanation": "This command sets up a new React project."
+        },
+        {
+          "section_title": "Components and Props",
+          "section_content": "Learn about components and passing props.",
+          "code_snippet": "function Welcome(props) { return <h1>Hello, {props.name}</h1>; }",
+          "images": ["react_components_image.png"],
+          "additional_info": "This creates a component that greets the user."
+        },
+        {
+          "section_title": "State and Lifecycle",
+          "section_content": "Manage state and component lifecycle in React.",
+          "recommendation": "Use hooks to simplify state management."
+        }
+      ]
+    },
+    "tags": ["React", "JavaScript", "Web Development"],
+    "metadata": {
+      "word_count": 350,
+      "read_time": "5 minutes"
+    }
+  }
+]

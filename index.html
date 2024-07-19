@@ -44,10 +44,10 @@
 
                 <div class="menu-list">
                     <ul>
-                        <li><a href="#">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#skills">SKILLS</a></li>
-                        <li><a href="https://blogs.mrtahir.com/">BLOGS</a></li>
+                        <li><a href="blogs.html">BLOGS</a></li>
                         <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
@@ -83,6 +83,7 @@
                 <p>Front-end Developer</p>
                 <div class="contact-button">
                     <a href="#contact">Hire me ➜</a>
+                    <a href="#projects">Projects ➜</a>
                 </div>
             </div>
         </div>
@@ -156,7 +157,7 @@
             <div id="loading-icon" class="loading-icon" style="display: none;">
                 <img src="assets/images/loading.gif" alt="Loading...">
             </div>
-            <div class="nextpre">
+            <div class="pagination">
                 <button id="previous" class="show-more" disabled>Previous</button>
                 <button id="next" class="show-more">Next</button>
             </div>
@@ -238,12 +239,13 @@
         </div>
     </section>
 
-<!-- Custom Popup with Toast Message -->
+    <!-- Custom Popup with Toast Message -->
 
-    <div class="toast">
-      <span class="toast-message">Opening Gmail...</span>
-    </div>
-  
+    <!-- <div class="toast">
+        <span class="toast-message">Opening Gmail...</span>
+    </div> -->
+    <div id="toaster" class="toaster">Opening Gmail ...</div>
+
     <!-- Popup -->
     <div id="certificate-popup" class="certificate-popup">
         <div class="popup-content">
