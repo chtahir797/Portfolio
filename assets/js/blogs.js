@@ -5,9 +5,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const blogContainer = document.getElementById("blog-container");
     const nextBtn = document.getElementById("next");
     const prevBtn = document.getElementById("previous");
+    const loadingIcon = document.getElementById("loading-icon"); // Get the loading icon element
     const blogsPerPage = 3;
     let currentPage = 0;
     let blogData = [];
+
+    // Show the loading icon only during the initial data fetch
+    loadingIcon.style.display = "block";
 
     // Fetch blog data from data.json
     fetch("https://raw.githubusercontent.com/chtahir797/JSONDATA/main/MrTahir/data.json")
@@ -15,8 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             blogData = data;
             displayBlogs(blogData);
+
         })
-        .catch(error => console.error("Error fetching blog data:", error));
+        .catch(error => {
+            console.error("Error fetching blog data:", error);
+            // Hide the loading icon even if there's an error
+            loadingIcon.style.display = "none";
+        });
 
     // Function to create and display blog cards
     function displayBlogs(blogs) {
@@ -33,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="blog-card">
                         <div class="blog-card-content">
                             <div class="blog-card-title">${blog.title}</div>
-                            <div class="blog-card-summary">${blog.content.introduction.slice(0,200) + " ..."}</div>
+                            <div class="blog-card-summary">${blog.content.introduction.slice(0,100) + " ..."}</div>
                         </div>
                         <div class="blog-card-footer">
                             <div class="tags">
@@ -48,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `;
                 blogContainer.innerHTML += cardHTML;
+            // Hide the loading icon after data is loaded
+            loadingIcon.style.display = "none";
             });
 
             // Initialize Tilt.js on blog cards

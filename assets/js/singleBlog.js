@@ -26,6 +26,7 @@ fetch("https://raw.githubusercontent.com/chtahir797/JSONDATA/main/MrTahir/data.j
 
 // Function to display blog based on index
 function displayBlog(index) {
+
   if (index < 0 || index >= blogs.length) {
     document.getElementById("blog-detail").innerHTML = "<p>Blog not found.</p>";
     return;
@@ -77,7 +78,7 @@ function displayBlog(index) {
   `).join('');
 
   blogDetail.innerHTML = blogHTML;
-
+  
   // Attach event listeners for copy buttons
   document.querySelectorAll('.copy-btn').forEach((btn) => {
     btn.addEventListener('click', (event) => {
