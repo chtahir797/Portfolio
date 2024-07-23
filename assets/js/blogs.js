@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let blogData = [];
 
     // Fetch blog data from data.json
-    fetch("data.json")
+    fetch("https://raw.githubusercontent.com/chtahir797/JSONDATA/main/MrTahir/data.json")
         .then(response => response.json())
         .then(data => {
             blogData = data;
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="blog-card">
                         <div class="blog-card-content">
                             <div class="blog-card-title">${blog.title}</div>
-                            <div class="blog-card-summary">${blog.content.introduction}</div>
+                            <div class="blog-card-summary">${blog.content.introduction.slice(0,200) + " ..."}</div>
                         </div>
                         <div class="blog-card-footer">
                             <div class="tags">

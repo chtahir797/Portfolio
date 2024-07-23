@@ -722,7 +722,10 @@ footer a {
 .container {
   padding: 2rem;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
+  background: #599ab63d;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
 }
 
 /* Blog title styling */
@@ -730,14 +733,14 @@ footer a {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #e74c3c;
+  color: #df2554;
   text-align: center;
 }
 
 /* Blog meta info styling */
 .blog-date,
 .blog-author {
-  color:#3498db;
+  color:#ccc;
   margin-bottom: 0.5rem;
   text-align: center;
 }
@@ -747,6 +750,7 @@ footer a {
   margin-bottom: 1rem;
   color: #f39c12;
   text-align: justify;
+  font-weight: 700;
 }
 
 /* Section title styling */
@@ -760,9 +764,11 @@ footer a {
 }
 
 .section-content {
-  margin-top: 1rem;
-  color: #f8f8f2;
+  margin: 1rem 0;
+  color: #df2554;
   text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /* Code snippet styling */
