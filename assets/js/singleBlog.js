@@ -3,7 +3,7 @@ let currentBlogIndex = 0;
 let blogs = [];
 
 // Fetch blog data from data.json
-fetch("data.json")
+fetch("https://raw.githubusercontent.com/chtahir797/JSONDATA/main/MrTahir/data.json")
   .then((response) => response.json())
   .then((data) => {
     blogs = data; // Store blog data
