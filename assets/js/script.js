@@ -13,14 +13,18 @@ width.addEventListener("change", () => {
   }
 });
 
+const container = document.querySelector('.container');
+const blogContainer = document.querySelector('.blog-container');
+
 hamburger.addEventListener("click", () => {
-  // menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-  if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
+  const isMenuHidden = menu.style.display === "none" || menu.style.display === "";
+  menu.style.display = isMenuHidden ? "block" : "none";
+  
+  const positionStyle = isMenuHidden ? 'position: sticky; z-index: -1;' : '';
+  container.style.cssText = positionStyle;
+  blogContainer.style.cssText = positionStyle;
 });
+
 
 const certificatesSlider = document.querySelector(".certificates-slider");
 
