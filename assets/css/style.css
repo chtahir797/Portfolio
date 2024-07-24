@@ -836,7 +836,7 @@ code {
 
 /* Copy button styling */
 .copy-btn {
-  align-self: flex-end;
+  align-self: flex-start;
   cursor: pointer;
   background: none;
   outline: none;
