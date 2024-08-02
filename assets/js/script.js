@@ -96,7 +96,7 @@ const projects = [
     "id": 6,
     "title": "GitHub User Explorer",
     "description": "Check out my GitHub User Explorer app built with React, Tailwind CSS, TanStack Query, and TypeScript. Explore user profiles and repositories with a sleek dark mode! 🌟",
-    "link": "https://github.com/chtahir797/GitHub-User-Explorer",
+    "link": "https://github.com/chtahir797/React-Practice-Projects/tree/main/ExploreGithubUsers",
     "demo": "https://exploregithubusers.netlify.app/",
     "tags": ["React", "Tailwind CSS", "TanStack Query", "TypeScript"]
 }
