@@ -99,7 +99,16 @@ const projects = [
     "link": "https://github.com/chtahir797/React-Practice-Projects/tree/main/ExploreGithubUsers",
     "demo": "https://exploregithubusers.netlify.app/",
     "tags": ["React", "Tailwind CSS", "TanStack Query", "TypeScript"]
+},
+{
+  "id": 7,
+  "title": "Authentication App",
+  "description": "Explore my Authentication App built with Next.js, Tailwind CSS, and Firebase. This app offers a seamless sign-in experience, complete with email/password authentication and responsive design. Check it out now! 🔒",
+  "link": "https://github.com/chtahir797/authentication-app",
+  "demo": "https://authentication-app-by-tahir.vercel.app/signin",
+  "tags": ["Next.js", "Tailwind CSS", "Firebase"]
 }
+
 
   
 ];
