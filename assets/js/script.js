@@ -13,39 +13,39 @@ width.addEventListener("change", () => {
   }
 });
 
-const container = document.querySelector('.container');
-const blogContainer = document.querySelector('.blog-container');
+const container = document.querySelector(".container");
+const blogContainer = document.querySelector(".blog-container");
 
 hamburger.addEventListener("click", () => {
-  const isMenuHidden = menu.style.display === "none" || menu.style.display === "";
+  const isMenuHidden =
+    menu.style.display === "none" || menu.style.display === "";
   menu.style.display = isMenuHidden ? "block" : "none";
-  
-  const positionStyle = isMenuHidden ? 'position: sticky; z-index: -1;' : '';
+
+  const positionStyle = isMenuHidden ? "position: sticky; z-index: -1;" : "";
   container.style.cssText = positionStyle;
   blogContainer.style.cssText = positionStyle;
 });
 
+// const certificatesSlider = document.querySelector(".certificates-slider");
 
-const certificatesSlider = document.querySelector(".certificates-slider");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const certificates = document.querySelectorAll(".certificate");
+//   const certificatePopup = document.getElementById("certificate-popup");
+//   const popupImage = document.getElementById("popup-image");
+//   const closePopup = document.querySelector(".close-popup");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const certificates = document.querySelectorAll(".certificate");
-  const certificatePopup = document.getElementById("certificate-popup");
-  const popupImage = document.getElementById("popup-image");
-  const closePopup = document.querySelector(".close-popup");
+//   certificates.forEach((certificate) => {
+//     certificate.addEventListener("click", function () {
+//       const certificateImage = this.querySelector("img").src;
+//       popupImage.src = certificateImage;
+//       certificatePopup.style.display = "flex";
+//     });
+//   });
 
-  certificates.forEach((certificate) => {
-    certificate.addEventListener("click", function () {
-      const certificateImage = this.querySelector("img").src;
-      popupImage.src = certificateImage;
-      certificatePopup.style.display = "flex";
-    });
-  });
-
-  closePopup.addEventListener("click", function () {
-    certificatePopup.style.display = "none";
-  });
-});
+//   closePopup.addEventListener("click", function () {
+//     certificatePopup.style.display = "none";
+//   });
+// });
 const projects = [
   {
     id: 1,
@@ -93,56 +93,83 @@ const projects = [
     tags: ["JavaScript", "API"],
   },
   {
-    "id": 6,
-    "title": "GitHub User Explorer",
-    "description": "Check out my GitHub User Explorer app built with React, Tailwind CSS, TanStack Query, and TypeScript. Explore user profiles and repositories with a sleek dark mode! 🌟",
-    "link": "https://github.com/chtahir797/React-Practice-Projects/tree/main/ExploreGithubUsers",
-    "demo": "https://exploregithubusers.netlify.app/",
-    "tags": ["React", "Tailwind CSS", "TanStack Query", "TypeScript"]
-},
-{
-  "id": 7,
-  "title": "Authentication App",
-  "description": "Explore my Authentication App built with Next.js, Tailwind CSS, and Firebase. This app offers a seamless sign-in experience, complete with email/password authentication and responsive design. Check it out now! 🔒",
-  "link": "https://github.com/chtahir797/authentication-app",
-  "demo": "https://authentication-app-by-tahir.vercel.app/signin",
-  "tags": ["Next.js", "Tailwind CSS"]
-}
-
-
-  
+    id: 6,
+    title: "GitHub User Explorer",
+    description:
+      "Check out my GitHub User Explorer app built with React, Tailwind CSS, TanStack Query, and TypeScript. Explore user profiles and repositories with a sleek dark mode! 🌟",
+    link: "https://github.com/chtahir797/React-Practice-Projects/tree/main/ExploreGithubUsers",
+    demo: "https://exploregithubusers.netlify.app/",
+    tags: ["React", "Tailwind CSS", "TanStack Query", "TypeScript"],
+  },
+  {
+    id: 7,
+    title: "Authentication App",
+    description:
+      "Explore my Authentication App built with Next.js, Tailwind CSS, and Firebase. This app offers a seamless sign-in experience, complete with email/password authentication and responsive design. Check it out now! 🔒",
+    link: "https://github.com/chtahir797/authentication-app",
+    demo: "https://authentication-app-by-tahir.vercel.app/signin",
+    tags: ["Next.js", "Tailwind CSS"],
+  },
 ];
 
+//Certificate section
 
-let currentProjectIndex = 0;
-const projectsPerPage = 3;
+const totalCertificates = 3;
+let currentIndex = 1;
 
-const totalCertificates = 3; 
-let currentIndex = 1; 
+const slider = document.getElementById("slider");
+const nextCertButton = document.getElementsByClassName("previous-cert")[0];
+const prevCertButton = document.getElementsByClassName("next-cert")[0];
 
-const slider = document.getElementById('slider');
-const nextCertButton = document.getElementsByClassName('previous-cert')[0];
-const prevCertButton = document.getElementsByClassName('next-cert')[0];
+
+slider.addEventListener('click', () => {
+    const getSrc = slider.getAttribute("src");
+
+    // Create the popup HTML and insert it into the body
+    let newPopup = `
+        <section class="certificate-popup">
+            <div class="certificate-popup-image">
+                <img src="${getSrc}" alt="certificate">
+                <span class="certificate-popup-close">
+                    <img src="assets/images/cross.svg" alt="Close">
+                </span>
+            </div>
+        </section>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', newPopup);
+
+    // Add event listener to close the popup when the close button is clicked
+    document.querySelector('.certificate-popup-close').addEventListener('click', () => {
+        document.querySelector('.certificate-popup').remove();
+    });
+});
+
+
 
 function updateSlider() {
-  slider.setAttribute('src', `assets/images/certificate${currentIndex}.jpg`);
+  slider.setAttribute("src", `assets/images/certificate${currentIndex}.jpg`);
 }
 
-nextCertButton.addEventListener('click', () => {
+nextCertButton.addEventListener("click", () => {
   currentIndex++;
   if (currentIndex > totalCertificates) {
-      currentIndex = 1; 
+    currentIndex = 1;
   }
   updateSlider();
 });
 
-prevCertButton.addEventListener('click', () => {
+prevCertButton.addEventListener("click", () => {
   currentIndex--;
   if (currentIndex < 1) {
-      currentIndex = totalCertificates; 
+    currentIndex = totalCertificates;
   }
   updateSlider();
 });
+
+//Project section
+let currentProjectIndex = 0;
+const projectsPerPage = 3;
 
 function displayProjects() {
   const projectGrid = document.getElementById("project-grid");
@@ -173,8 +200,12 @@ function displayProjects() {
             .join(" ")}
         </div>
         <div class="links">
-          <a href="${project.link}" target="_blank"><img src="assets/images/code.svg" alt="Code"></a>
-          <a href="${project.demo}" target="_blank"><img src="assets/images/redirect.svg" alt="Demo"></a>
+          <a href="${
+            project.link
+          }" target="_blank"><img src="assets/images/code.svg" alt="Code"></a>
+          <a href="${
+            project.demo
+          }" target="_blank"><img src="assets/images/redirect.svg" alt="Demo"></a>
         </div>
       `;
       projectGrid.appendChild(projectItem);
@@ -200,7 +231,6 @@ function displayProjects() {
       glare: true,
       "max-glare": 0.5,
     });
-
   }, 1000);
 }
 
@@ -220,17 +250,18 @@ document.getElementById("previous").addEventListener("click", () => {
 
 displayProjects();
 
-
-document.getElementById('send-email').addEventListener('click', function() {
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+document.getElementById("send-email").addEventListener("click", function () {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
   // Compose email content
-  const subject = encodeURIComponent('Message from ' + name);
-  const body = encodeURIComponent('Email: ' + email + '\n\nMessage:\n' + message);
-  const mailtoLink = 'mailto:chtahir797@gmail.com?subject=' + subject + '&body=' + body;
+  const subject = encodeURIComponent("Message from " + name);
+  const body = encodeURIComponent(
+    "Email: " + email + "\n\nMessage:\n" + message
+  );
+  const mailtoLink =
+    "mailto:chtahir797@gmail.com?subject=" + subject + "&body=" + body;
 
   // Detect device type
   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
@@ -240,13 +271,11 @@ document.getElementById('send-email').addEventListener('click', function() {
     setTimeout(() => {
       // This creates a Gmail URL to open in a new tab
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=chtahir797@gmail.com&su=${subject}&body=${body}`;
-      window.open(gmailUrl, '_blank');
+      window.open(gmailUrl, "_blank");
     }, 2000);
   }
   showToaster("Opening Gmail ...");
-
 });
-
 
 function showToaster(message) {
   const toaster = document.getElementById("toaster");
@@ -256,7 +285,6 @@ function showToaster(message) {
     toaster.classList.remove("show");
   }, 3000);
 }
-
 
 // tilt effect
 

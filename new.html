@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            background-image: url('/assets/images/mrtahir.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .certificate-popup{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        .certificate-popup-image{
+            position: relative;
+        }
+        .certificate-popup-close{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .certificate-popup-close img{
+            width: 50px;
+            height: 50px;
+            transition: scale 0.1s linear;
+        }
+        .certificate-popup-close img:hover{
+            scale: 1.2;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section class="certificate-popup">
+        <div class="certificate-popup-image">
+            <img src="/assets/images/certificate1.jpg" alt="certificate">
+            <span class="certificate-popup-close"><img src="assets/images/cross.svg" alt="" srcset=""></span>
+        </div>
+    </section>
+</body>
+</html>
