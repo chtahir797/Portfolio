@@ -117,6 +117,33 @@ const projects = [
 let currentProjectIndex = 0;
 const projectsPerPage = 3;
 
+const totalCertificates = 3; 
+let currentIndex = 1; 
+
+const slider = document.getElementById('slider');
+const nextCertButton = document.getElementsByClassName('previous-cert')[0];
+const prevCertButton = document.getElementsByClassName('next-cert')[0];
+
+function updateSlider() {
+  slider.setAttribute('src', `assets/images/certificate${currentIndex}.jpg`);
+}
+
+nextCertButton.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex > totalCertificates) {
+      currentIndex = 1; 
+  }
+  updateSlider();
+});
+
+prevCertButton.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 1) {
+      currentIndex = totalCertificates; 
+  }
+  updateSlider();
+});
+
 function displayProjects() {
   const projectGrid = document.getElementById("project-grid");
   const nextBtn = document.getElementById("next");
